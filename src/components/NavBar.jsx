@@ -150,6 +150,43 @@ function NavBar() {
           </svg>
         </button>
       </div>
+      <AnimatePresence>
+        {showMenu && (
+          <motion.div
+            variants={menuVars}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="fixed h-screen w-screen top-0 left-0 bg-gray-200 dark:bg-gray-800 backdrop-blur-sm origin-top"
+          >
+            <div className="flex h-full flex-col">
+              <motion.div
+                variants={containerVars}
+                initial="initial"
+                animate="open"
+                exit="initial"
+                className="flex flex-col h-full justify-center items-center gap-4 "
+              >
+                <MobileNavLink
+                  title="Home"
+                  href="/"
+                  handleMenuClick={handleMenuClick}
+                />
+                <MobileNavLink
+                  title="About"
+                  href="about"
+                  handleMenuClick={handleMenuClick}
+                />
+                <MobileNavLink
+                  title="Contact Us"
+                  href="contact"
+                  handleMenuClick={handleMenuClick}
+                />
+              </motion.div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
