@@ -190,5 +190,50 @@ function NavBar() {
     </header>
   );
 }
+const mobileLinkVars = {
+  initial: {
+    y: "30vh",
+    transition: {
+      duration: 0.5,
+      ease: [0.37, 0, 0.63, 1],
+    },
+  },
+  open: {
+    y: 0,
+    transition: {
+      ease: [0, 0.55, 0.45, 1],
+      duration: 0.7,
+    },
+  },
+};
+const MobileNavLink = ({ title, href, type = "link", handleMenuClick }) => {
+  if (type === "link") {
+    return (
+      <div className="overflow-hidden">
+        <motion.div
+          variants={mobileLinkVars}
+          className="text-2xl dark:text-gray-200 text-gray-700"
+        >
+          <Link to={href} onClick={handleMenuClick}>
+            {title}
+          </Link>
+        </motion.div>
+      </div>
+    );
+  } else if (type === "btn") {
+    return (
+      <div className="overflow-hidden">
+        <motion.div
+          variants={mobileLinkVars}
+          className="text-2xl text-gray-100"
+        >
+          <button className="rounded-lg px-4 py-2 bg-green-600 hover:bg-green-700">
+            {title}
+          </button>
+        </motion.div>
+      </div>
+    );
+  }
+};
 
 export default NavBar;
