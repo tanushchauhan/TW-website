@@ -25,3 +25,15 @@ npm run build
 ```
 
 :information_source: This project has a contact page which has a form that can be linked to receive emails on submission if the project is hosted on netlify. Check [this](https://www.netlify.com/platform/core/forms/) for more information.
+
+## Screenshots
+
+![App Screenshot](https://raw.githubusercontent.com/tanushchauhan/TW-website/main/screenshots/1.png)
+
+![App Screenshot](https://raw.githubusercontent.com/tanushchauhan/TW-website/main/screenshots/2.png)
+
+![App Screenshot](https://raw.githubusercontent.com/tanushchauhan/TW-website/main/screenshots/3.png)
+
+![App Screenshot](https://raw.githubusercontent.com/tanushchauhan/TW-website/main/screenshots/4.png)
+
+![App Screenshot](https://raw.githubusercontent.com/tanushchauhan/TW-website/main/screenshots/5.png)
